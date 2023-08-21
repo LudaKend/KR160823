@@ -1,13 +1,13 @@
-#from KR160823.src.config import WORDS_PATH
 
-def load_operations():
+
+def load_operations(JSON_PATH):
     '''Загружает список операций из файла json'''
-    with open('operations.json', encoding='utf-8') as file:    #operations.json   не забыть
+    with open(JSON_PATH, encoding='utf-8') as file:
         import json
         operations_json = json.loads(file.read())
     return operations_json
 
-#print(load_operations())       # для отладки
+#print(load_operations(JSON_PATH))       # для отладки
 #operations = load_operations() # для отладки
 
 def take_only_executed(operations):

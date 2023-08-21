@@ -33,11 +33,13 @@
 #- `to` — куда
 
 #0. Импорт всех необходимых функций и классов
+from config import JSON_PATH
+
 from utils import load_operations, take_only_executed, get_last_operations, transformation_date, printout
 
 
 def main():
-    operations = load_operations()
+    operations = load_operations(JSON_PATH)
 #    print(operations)                #для отладки, проверяю что загружено
 
     operations_executed = take_only_executed(operations)
