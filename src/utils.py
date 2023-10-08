@@ -1,5 +1,3 @@
-
-
 def load_operations(JSON_PATH):
     '''Загружает список операций из файла json'''
     with open(JSON_PATH, encoding='utf-8') as file:
